@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
-    public static final int NAME_MIN_LENGTH = 2;
-    public static final int NAME_MAX_LENGTH = 15;
+    private static final int NAME_MIN_LENGTH = 2;
+    private static final int NAME_MAX_LENGTH = 15;
 
     private String name;
     private ArrayList<Product> products;
@@ -49,8 +49,8 @@ public class Category {
         boolean isFound = false;
 
         for (Product product : this.products) {
-                sb.append(product.print());
-                isFound = true;
+            sb.append(product.print());
+            isFound = true;
         }
 
         if (!isFound) {

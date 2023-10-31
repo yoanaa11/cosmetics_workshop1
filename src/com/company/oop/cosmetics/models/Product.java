@@ -13,10 +13,8 @@ public class Product {
     private String brand;
     private double price;
     private GenderType gender;
-    // "Each product in the system has name, brand, price and gender."
 
     public Product(String name, String brand, double price, GenderType gender) {
-        // finish the constructor and validate data
         setName(name);
         setBrand(brand);
         setPrice(price);
