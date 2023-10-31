@@ -38,11 +38,6 @@ public class CosmeticsRepositoryImpl implements CosmeticsRepository {
 
     @Override
     public Product findProductByName(String productName) {
-        /**
-         * Hint: You have to go through every product and see if one has name equal to productName.
-         *       If not, "throw new IllegalArgumentException("Product %s does not exist!");"
-         */
-
         for (Product currentProduct : this.products) {
             if (currentProduct.getName().equals(productName)) {
                 return currentProduct;
@@ -54,11 +49,6 @@ public class CosmeticsRepositoryImpl implements CosmeticsRepository {
 
     @Override
     public Category findCategoryByName(String categoryName) {
-        /**
-         * Hint: You have to go through every category and see if one has name equal to categoryName.
-         *       If not, "throw new IllegalArgumentException("Category %s does not exist!");"
-         */
-
         for (Category currentCategory : this.categories) {
             if (currentCategory.getName().equals(categoryName)) {
                 return currentCategory;
@@ -84,10 +74,6 @@ public class CosmeticsRepositoryImpl implements CosmeticsRepository {
 
     @Override
     public boolean categoryExist(String categoryName) {
-        /**
-         * Hint: You have to go through every category and see if one has name equal to categoryName.
-         *       If there is one, return true. If not, return false.
-         */
         for (Category category : this.categories) {
             if (category.getName().equals(categoryName)) {
                 return true;
@@ -99,10 +85,6 @@ public class CosmeticsRepositoryImpl implements CosmeticsRepository {
 
     @Override
     public boolean productExist(String productName) {
-        /**
-         * Hint: You have to go through every product and see if one has name equal to productName.
-         *       If there is one, return true. If not, return false.
-         */
         for (Product product : this.products) {
             if (product.getName().equals(productName)) {
                 return true;

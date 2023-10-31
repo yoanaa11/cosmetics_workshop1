@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Product {
 
-    public static final int NAME_MIN_LENGTH = 3;
-    public static final int NAME_MAX_LENGTH = 10;
-    public static final int BRAND_MIN_LENGTH = 2;
-    public static final int BRAND_MAX_LENGTH = 10;
+    private static final int NAME_MIN_LENGTH = 3;
+    private static final int NAME_MAX_LENGTH = 10;
+    private static final int BRAND_MIN_LENGTH = 2;
+    private static final int BRAND_MAX_LENGTH = 10;
 
     private String name;
     private String brand;
@@ -27,7 +27,7 @@ public class Product {
         return this.name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if (name.length() < NAME_MIN_LENGTH || name.length() > NAME_MAX_LENGTH) {
             throw new IllegalArgumentException("Name should be between 3 and 10 symbols.");
         }
@@ -39,7 +39,7 @@ public class Product {
         return this.brand;
     }
 
-    public void setBrand(String brand) {
+    private void setBrand(String brand) {
         if (brand.length() < BRAND_MIN_LENGTH || brand.length() > BRAND_MAX_LENGTH) {
             throw new IllegalArgumentException("Brand should be between 2 and 10 symbols.");
         }
@@ -51,7 +51,7 @@ public class Product {
         return this.price;
     }
 
-    public void setPrice(double price) {
+    private void setPrice(double price) {
         if (price < 0) {
             throw new IllegalArgumentException("Price should be non negative.");
         }
@@ -63,17 +63,11 @@ public class Product {
         return this.gender;
     }
 
-    public void setGender(GenderType gender) {
+    private void setGender(GenderType gender) {
         this.gender = gender;
     }
 
     public String print() {
-        // Format:
-        //" #[Name] [Brand]
-        // #Price: [Price]
-        // #Gender: [Gender]
-        // ==="
-
         StringBuilder sb = new StringBuilder();
 
         sb.append(String.format(" #%s %s%n", this.name, this.brand));

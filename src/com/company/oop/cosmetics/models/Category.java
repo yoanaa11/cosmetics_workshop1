@@ -19,7 +19,7 @@ public class Category {
         return this.name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if (name.length() < NAME_MIN_LENGTH || name.length() > NAME_MAX_LENGTH) {
             throw new IllegalArgumentException("Name should be between 2 and 15 symbols.");
         }
